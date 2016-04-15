@@ -38,7 +38,9 @@ public class HomeController {
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
             logger.info(model.toString() + " " + this.pageMessage);
+
         }
+        logger.info("HEEEEEEEEEEEEEEEEEEE");
         return "index";
     }
 
