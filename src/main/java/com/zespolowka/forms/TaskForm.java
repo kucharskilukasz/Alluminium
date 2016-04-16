@@ -1,6 +1,7 @@
 package com.zespolowka.forms;
 
 import com.zespolowka.entity.createTest.ProgrammingLanguages;
+import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.Size;
 import java.util.Set;
@@ -18,7 +19,6 @@ public class TaskForm {
     private String answer;
 
     private int taskType;
-
     private int points;
 
     private Set<String> languages = new TreeSet<>();
