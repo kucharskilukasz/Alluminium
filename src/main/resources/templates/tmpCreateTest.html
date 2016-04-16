@@ -174,7 +174,7 @@
                             <label for="nazwaTest" th:text="#{test.caseSensitivity}"/>
                             <div class="checkbox">
                                 <label><input type="checkbox" th:field="*{tasks[__${rowStat.index}__].caseSensitivity}"
-                                              value="case_sens"/> Tak</label>
+                                              value="case_sens" th:text="#{yes}"/></label>
                             </div>
                         </div>
                         <div class="form-group col-md-2">
