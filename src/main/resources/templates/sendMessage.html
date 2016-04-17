@@ -2,19 +2,19 @@
       xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorator="layout">
 <head>
-    <title>Wyslij wiadomosc</title>
+    <title th:text="#{sendMessage.title}">Wyslij wiadomosc</title>
 </head>
 <body>
 <div layout:fragment="content" class="container">
     <form class="form-register" action="" enctype="multipart/form-data" method="post" th:object="${newMessageForm}">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">Nowa wiadomosc</h3>
+                <h3 class="panel-title" th:text="#{sendMessage.newMessage}">Nowa wiadomosc</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <h4>Login uzytkownika lub nazwa grupy:</h4>
+                        <h4 th:text="#{sendMessage.messageReceiver}">Login uzytkownika lub nazwa grupy:</h4>
                         <div class="input-group">
                             <input type="text" class="form-control" id="receivers" name="receivers"
                                    th:field="*{receivers}"/>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <h4>Temat</h4>
+                        <h4 th:text="sendMessage.topic">Temat</h4>
                         <div class="input-group">
                             <input type="text" class="form-control" id="topic" name="topic" th:field="*{topic}"/>
                             <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <h4>Wiadomosc.</h4>
+                        <h4 th:text="#{sendMessage.message}+'.'">Wiadomosc.</h4>
                         <div class="input-group">
                             <textarea rows="30" class="form-control" name="message" th:field="*{message}"></textarea>
                             <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
