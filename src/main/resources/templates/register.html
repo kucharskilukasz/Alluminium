@@ -24,6 +24,7 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="email" th:text="#{register.email}"/>
+
                         <div class="input-group">
                             <input class="form-control" id="email" type="email" th:field="*{email}"
                                    ng-model="email"
@@ -40,6 +41,7 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="name" th:text="#{register.name}"/>
+
                         <div class="input-group">
                             <input id="name" type="text" class="form-control" th:placeholder="#{register.name}"
                                    ng-minlength="4" ng-maxlength="15"
@@ -54,6 +56,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="lastName" th:text="#{register.lastName}"/>
+
                         <div class="input-group">
                             <input id="lastName" type="text" class="form-control" th:placeholder="#{register.lastName}"
                                    required="required" ng-model="lastName"
@@ -72,6 +75,7 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="password" th:text="#{register.password}"/>
+
                         <div class="input-group">
                             <input id="password" type="password" class="form-control" ng-model="password"
                                    ng-pattern="/^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/"
@@ -87,6 +91,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="confirmPassword" th:text="#{register.confirm_password}"/>
+
                         <div class="input-group">
                             <input id="confirmPassword" type="password" class="form-control"
                                    th:placeholder="#{register.confirm_password}" required="required"

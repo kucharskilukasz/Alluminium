@@ -2,6 +2,7 @@ package com.zespolowka.controller;
 
 import com.zespolowka.service.inteface.SolutionTestService;
 import com.zespolowka.service.inteface.TestService;
+import com.zespolowka.service.inteface.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,8 @@ public class HomeController {
     @Autowired
     private SolutionTestService solutionTestService;
 
+    @Autowired
+    private UserService userService;
 
     @Value("${homepage.message}")
     private String pageMessage;
@@ -40,7 +43,6 @@ public class HomeController {
             logger.info(model.toString() + " " + this.pageMessage);
 
         }
-        logger.info("HEEEEEEEEEEEEEEEEEEE");
         return "index";
     }
 

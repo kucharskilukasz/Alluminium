@@ -13,4 +13,5 @@ public interface UserRepository extends CrudRepository<User, Long> {
     Optional<User> findUserByEmail(String email);
 
     Collection<User> findEmailByEmailIgnoreCaseContainingOrNameIgnoreCaseContainingOrLastNameIgnoreCaseContaining(String email, String name, String lastname);
+
 }

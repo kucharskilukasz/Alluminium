@@ -8,13 +8,15 @@
 <div layout:fragment="content">
     <div class="jumbotron" sec:authorize="isAuthenticated()">
         <div class="container">
-            <h1 style="float:left" th:text="#{home.welcome}"></h1><span><h1><strong th:text="#{mainPage.user}"></strong></h1></span>
+            <h1 style="float:left" th:text="#{home.welcome}"></h1><span><h1><strong th:text="#{mainPage.user}"></strong>
+        </h1></span>
+
             <h2 th:text="#{mainPage.greetings}"></h2>
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#aktywne" aria-controls="aktywne" role="tab"
                                                           data-toggle="tab" th:text="#{mainPage.activeTests}"></a></li>
                 <li role="presentation"><a href="#archiwalne" aria-controls="archiwalne" role="tab"
-                                                          data-toggle="tab" th:text="#{mainPage.activeTests}"></a></li>
+                                           data-toggle="tab" th:text="#{mainPage.activeTests}"></a></li>
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="aktywne">.
@@ -74,23 +76,29 @@
         <div class="row">
             <div class="col-md-4">
                 <h2>Dalej</h2>
+
                 <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
                     mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
                     mollis euismod. Donec sed odio dui. </p>
+
                 <p><a class="btn btn-default" href="#" role="button">Krzychu &raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>nie wiem</h2>
+
                 <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
                     mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
                     mollis euismod. Donec sed odio dui. </p>
+
                 <p><a class="btn btn-default" href="#" role="button">ma problem &raquo;</a></p>
             </div>
             <div class="col-md-4">
                 <h2>po co to</h2>
+
                 <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
                     porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
                     ut fermentum massa justo sit amet risus.</p>
+
                 <p><a class="btn btn-default" href="#" role="button">z erekcja &raquo;</a></p>
             </div>
         </div>

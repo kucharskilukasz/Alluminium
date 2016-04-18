@@ -13,6 +13,7 @@
     <form class="form-register" action="" th:object="${userEditForm}" method="post">
         <input type="hidden" th:field="*{id}"/>
         <input type="hidden" th:field="*{role}"/>
+
         <div class="panel panel-primary">
             <div class="panel-heading" sec:authorize="isAuthenticated()">
                 <h3 class="panel-title" style="display: inline;" th:text="#{userEdit.edit_user}"></h3>
@@ -29,7 +30,7 @@
                 <div class="row">
                     <div class="form-group col-md-6">
 
-                        <label for="InputImie"  th:text="#{userEdit.name}"></label>
+                        <label for="InputImie" th:text="#{userEdit.name}"></label>
 
                         <div class="input-group">
                             <input type="text" class="form-control" id="InputImie" name="InputImie"
@@ -41,13 +42,15 @@
 
                         <div class="input-group">
                             <input type="text" class="form-control" id="InputNazwisko" name="InputNazwisko"
-                                   value="Aktualne nazwisko" th:placeholder="#{userEdit.last_name}" th:field="*{lastName}"/>
+                                   value="Aktualne nazwisko" th:placeholder="#{userEdit.last_name}"
+                                   th:field="*{lastName}"/>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="InputEmail" th:text="#{userEdit.email}"></label>
+
                         <div class="input-group">
                             <input type="email" class="form-control" id="InputEmail" name="InputEmail"
                                    value="Aktualny email" th:placeholder="#{userEdit.email}" th:field="*{email}"/>
@@ -84,6 +87,7 @@
 
     </form>
 
-</div> <!-- /container -->
+</div>
+<!-- /container -->
 </body>
 </html>
